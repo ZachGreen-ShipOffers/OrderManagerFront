@@ -1,6 +1,9 @@
 class MainsController < ApplicationController
   before_action :set_main, only: [:show, :edit, :update, :destroy]
 
+  def tickets
+  end
+
   # GET /mains
   # GET /mains.json
   def index

@@ -1,0 +1,84 @@
+<div class="ui fixed inverted menu">
+  <div class="ui container">
+    <a href="#" class="header item">Client Name</a>
+    <a href="#" class="item">Dash</a>
+    <a href="/" class="item">Orders</a>
+    <a href="#" class="item">Shipments</a>
+    <a href="#" class="active item">Tickets</a>
+  </div>
+</div>
+<div class="ui main container">
+  <div class="ui input">
+    <input type="search" name="search" value="Search">
+  </div>
+  <a href="#"><i class="search icon"></i></a>
+
+  <!-- Order By drop down -->
+  <a href="#" class="ui simple dropdown">
+      Order By <i class="dropdown icon"></i>
+      <div class="menu">
+        <div class="item">Date
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <div class="item">ASC</div>
+            <div class="item">DESC</div>
+          </div>
+        </div>
+        <div class="item">Product(s)</div>
+        <div class="item">Name</div>
+        <div class="item">Order #</div>
+      </div>
+    </a>
+
+    <!--  Create New Ticket -->
+    <div class="ui button right">Submit New Ticket</div>
+
+    <div class="ui divider"></div>
+    <!--  Begin Cards -->
+    <div class="ui four cards">
+      <div class="ui card">
+        <div class="content">
+          <p class="header">Request</p>
+          <p class="">Date</p>
+          <p class="">Ticket#</p>
+          <p class="">Status</p>
+          <p class="">To Whom</p>
+          <button type="button" name="button" class="ui button right">Reply</button>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="ui modal">
+        <div class="header">
+          Submit New Ticket
+        </div>
+
+        <div class="ui form">
+          <div class="field">
+            <label>Issue</label>
+            <input type="text" name="name" value="">
+          </div>
+          <div class="field">
+            <label>Explaination</label>
+            <textarea name="name" rows="8" cols="40"></textarea>
+          </div>
+        </div>
+        <button class="ui button">Attach File <i class="attach icon"></i></button>
+        <a href="#" class="ui simple dropdown">To Whom <i class="dropdown icon"></i>
+          <div class="menu">
+            <div class="item">Returns</div>
+            <div class="item">IT</div>
+            <div class="item">Warehouse</div>
+            <div class="item">Customer Service</div>
+            <div class="item">Sales</div>
+            <div class="item">Wholesale</div>
+          </div>
+        </a>
+
+
+        <div class="actions">
+          <div class="ui black deny button" id="closemodal">Cancel</div>
+          <div class="ui positive labeled button" id="modalsave">Send</div>
+        </div>
+      </div>
+</div>

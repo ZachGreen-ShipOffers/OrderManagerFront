@@ -8,3 +8,26 @@
   margin-right: 15px;
   margin-top: 6em;
 }
+
+.right {
+  float: right;
+}
+.ui.modal {
+  top: 6.5em;
+}
+
+.left {
+  float: left;
+}
+
+.modal .input {
+  margin: 1%;
+  width: 47%;
+}
+
+.ui.form {
+  margin: 1%;
+  button {
+    margin: 1%;
+  }
+}

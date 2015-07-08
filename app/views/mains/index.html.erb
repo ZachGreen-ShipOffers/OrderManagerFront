@@ -1,10 +1,10 @@
 <div class="ui fixed inverted menu">
   <div class="ui container">
-    <a href="#" class="header item"><%= @title %></a>
+    <a href="#" class="header item">Client Name</a>
     <a href="#" class="item">Dash</a>
-    <a href="#" class="item">Orders</a>
+    <a href="#" class="active item">Orders</a>
     <a href="#" class="item">Shipments</a>
-    <a href="#" class="item">Tickets</a>
+    <a href="/tickets" class="item">Tickets</a>
   </div>
 </div>
 <div class="ui main container">
@@ -12,24 +12,27 @@
     <input type="search" name="search" value="Search">
   </div>
   <a href="#"><i class="search icon"></i></a>
-  <a href="#" class="ui simple dropdown item">
+
+  <!-- Order By drop down -->
+  <a href="#" class="ui simple dropdown">
       Order By <i class="dropdown icon"></i>
       <div class="menu">
-        <div class="item">Link Item</div>
-        <div class="item">Link Item</div>
-        <div class="divider"></div>
-        <div class="header">Header Item</div>
-        <div class="item">
+        <div class="item">Date
           <i class="dropdown icon"></i>
-          Sub Menu
           <div class="menu">
-            <div class="item">Link Item</div>
-            <div class="item">Link Item</div>
+            <div class="item">ASC</div>
+            <div class="item">DESC</div>
           </div>
         </div>
-        <div class="item">Link Item</div>
+        <div class="item">Product(s)</div>
+        <div class="item">Name</div>
+        <div class="item">Order #</div>
       </div>
     </a>
+
+    <div class="ui button right">Create New Order</div>
+
+    <div class="ui divider"></div>
     <!--  Begin Cards -->
     <div class="ui four cards">
       <div class="ui card">
@@ -38,6 +41,7 @@
           <p class="">Date</p>
           <p class="">Order#</p>
           <p class="">Product(s)</p>
+          <button type="button" name="button" class="ui button right">Edit</button>
         </div>
       </div>
 
@@ -47,6 +51,7 @@
           <p class="">Date</p>
           <p class="">Order#</p>
           <p class="">Product(s)</p>
+          <button type="button" name="button" class="ui button right">Edit</button>
         </div>
       </div>
 
@@ -56,6 +61,7 @@
           <p class="">Date</p>
           <p class="">Order#</p>
           <p class="">Product(s)</p>
+          <button type="button" name="button" class="ui button right">Edit</button>
         </div>
       </div>
 
@@ -65,6 +71,7 @@
           <p class="">Date</p>
           <p class="">Order#</p>
           <p class="">Product(s)</p>
+          <button type="button" name="button" class="ui button right">Edit</button>
         </div>
       </div>
 
@@ -74,6 +81,7 @@
           <p class="">Date</p>
           <p class="">Order#</p>
           <p class="">Product(s)</p>
+          <button type="button" name="button" class="ui button right">Edit</button>
         </div>
       </div>
 
@@ -83,7 +91,80 @@
           <p class="">Date</p>
           <p class="">Order#</p>
           <p class="">Product(s)</p>
+          <button type="button" name="button" class="ui button right">Edit</button>
         </div>
+      </div>
+    </div>
+
+    <!--  Order Edit Modal -->
+    <div class="ui modal">
+      <div class="header">
+        Order Edit Screen
+      </div>
+
+      <form class="ui form">
+        <h4 class="ui dividing header">Order Information</h4>
+
+        <div class="field">
+          <label>Name</label>
+          <div class="two fields">
+            <div class="field">
+              <input type="text" name="shipping[first-name]" placeholder="First Name">
+            </div>
+            <div class="field">
+              <input type="text" name="shipping[last-name]" placeholder="Last Name">
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Address</label>
+          <div class="two fields">
+            <div class="fourteen wide field">
+              <input type="text" name="" placeholder="Street Address">
+            </div>
+            <div class="two wide field">
+              <input type="text" name="" placeholder="Apt #">
+            </div>
+          </div>
+        </div>
+
+        <div class="feild">
+          <div class="three fields">
+            <div class="ten wide field">
+              <input type="text" name="name" placeholder="City">
+            </div>
+            <div class="two wide field">
+              <input type="text" name="name" placeholder="State">
+            </div>
+            <div class="four wide field">
+              <input type="text" name="name" placeholder="Zip">
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Email and Phone</label>
+          <div class="two fields">
+            <div class="field">
+              <input type="text" name="name" placeholder="Email">
+            </div>
+            <div class="field">
+              <input type="text" name="name" placeholder="Phone">
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Product(s)</label>
+            <input type="text" name="name" placeholder="Product(s)">
+          </div>
+        </div>
+      </form>
+
+      <div class="actions">
+        <div class="ui black deny button" id="closemodal">Cancel</div>
+        <div class="ui positive labeled button" id="modalsave">Save</div>
+        <div class="ui red button left" id="delete">Delete Order</div>
       </div>
     </div>
 </div>
