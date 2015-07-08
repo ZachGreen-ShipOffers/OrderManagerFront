@@ -4,6 +4,10 @@ class MainsController < ApplicationController
   def tickets
   end
 
+  def dash
+    render 'dashing/widgets/orders'
+  end
+
   # GET /mains
   # GET /mains.json
   def index

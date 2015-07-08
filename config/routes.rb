@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  mount Dashing::Engine, at: Dashing.config.engine_path
   resources :mains
   get 'tickets' => 'mains#tickets'
+  get 'dash' => 'mains#dash'
+  get 'shipments' => 'mains#shipments'
   root 'mains#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

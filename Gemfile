@@ -46,3 +46,5 @@ end
 # Added in
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
 gem "font-awesome-rails"
+gem 'dashing-rails'
+gem 'puma'
